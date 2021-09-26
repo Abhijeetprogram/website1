@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui design</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family:sans-serif;
+            background-image: url(down.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            width: 500px;
+            padding: 50px;
+            margin: 5px;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
+            border-color: white;
+            border-radius: 12px;
+        }
+
+        .box h2 {
+            margin: 23px;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .box .inputBox {
+            position: relative;
+        }
+
+        .box .inputBox input {
+            width: 100%;
+            font-size: 13px;
+            padding: 5px;
+            color: #fff;
+            margin-bottom: 30px;
+            border: none;
+            outline: none;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+        }
+
+        .box .inputBox label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            letter-spacing: 1px;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+            transition: .5s;
+
+        }
+
+        .box .inputBox input:focus ~label,
+        .box .inputBox input:valid ~label
+         {
+            top: -18px;
+            left: 0;
+            color: #03a9f4;
+            font-size: 12px;
+        }
+
+        .box input[type="submit"] {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #03a9f4;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>login form</h2>
+        <form class="container" method="POST" action="/">
+            <div class="inputBox">
+                <input type="text" name="name" >
+                <label> Username</label>
+            </div>
+            <div class="inputBox">
+                <input type="password" name="password" >
+                <label> password</label>
+            </div>
+            <div class="inputBox">
+                <input type="email" name="email" >
+                <label> Email</label>
+            </div>
+            <input type="submit" value="submit"  >
+        </form>
+    </div>
+
+</body>
+
+</html>
